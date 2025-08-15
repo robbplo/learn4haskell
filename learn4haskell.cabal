@@ -25,7 +25,7 @@ source-repository head
   location:            https://github.com/kowainik/learn4haskell.git
 
 common common-options
-  build-depends:       base >= 4.14.0.0 && < 4.18
+  build-depends:       base >= 4.14.0.0
 
   ghc-options:         -Wall
                        -Wcompat
@@ -53,7 +53,7 @@ common common-options
 common common-doctest
   import:              common-options
   hs-source-dirs:      test
-  build-depends:       doctest >= 0.17 && < 0.22
+  build-depends:       doctest >= 0.17 
   ghc-options:         -threaded
 
 library
@@ -74,7 +74,7 @@ test-suite learn4haskell-test
                        Test.Chapter3
                        Test.Chapter4
   build-depends:       learn4haskell
-                     , hspec >= 2.7.4 && < 2.11
+                     , hspec >= 2.7.4 
                      , hspec-hedgehog
                      , hedgehog  >= 1.0.2 && < 2
   ghc-options:         -threaded
